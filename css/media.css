@@ -1,0 +1,359 @@
+@charset "UTF-8";
+
+/*모바일 부분 헷갈리니까 여러번 보기*//
+
+/* 화면 너비가 1441px보다 작을때*/
+@media (max-width:1440px){
+    /* header */
+    .inner { width:100%; }
+
+    .gnb_nav { margin: 11px 0 0 -2px; }
+    .gnb_side { margin: 11px -2px 0 0; }
+
+    .gnb_area .dth1_a { padding:20px 15px 0; }
+    .util_wrap ul li:first-child a { padding-left: 15px;}
+
+
+    /**  content -keyVisualWrap ***/
+    .keyVisualWrap .bgInner { margin-left:-768px; }
+    .keyVisualWrap .bgInner img { margin-top:-30px; height:880px; }
+    .keyVisualWrap .txtArea h3 { font-size:38px; }
+
+
+
+
+    /*layout -디자인 */
+    .layout .bgArea .bgInner img { width:1425px; margin-top:0px; }
+
+
+
+    /* layout - 리스트 */
+    .layout .imgList .imgListTit { font-size:18px; }
+
+
+
+    /*section -buy */
+    .buy h3 { font-size:28px; }
+    .spec_list li { font-size:13px; }  
+    .spec_list span { font-size:22px; }
+    
+    .buy_car { width:750px; height:263px;}
+    
+}
+
+
+
+
+/* 화면너비 1241px 작을때*/
+@media (max-width:1240px){
+    /* layout  - 디자인 */
+    .layout .bgArea .bgInner img {  margin-left:-120px; }
+}
+
+
+/* 화면너비 1025px 작을때*/
+@media (max-width:1024px){
+/* header */
+header { position:absolute; height:60px; text-align:center; }
+header:before { display:none; }
+
+.logo { display:inline-block; position:relative; top:0; left:auto; transform:translate(0);}
+.logo a { padding-top:17px; width:80px;}
+.logo a:before { width:80px; background-size:80px auto;}
+
+/* 햄버거*/
+.open_gnb { display:block; width:60px; height:60px; position:absolute; top:0; left:40px; }
+.open_gnb span { position:absolute; width:20px; height:2px; top:calc(50% - 1px); 
+    left:calc(50% - 10px); background:#05141f; text-indent:-9999px; transition:0.4s; }
+
+.open_gnb span:before, .open_gnb span:after{ position:absolute; display:block; content:"";
+     width:20px; height:2px; background:#05141f; transition:0.4s; }
+.open_gnb span:before { top:-5px; }
+.open_gnb span:after { top:5px; }
+
+
+/* 햄버거 버튼 클릭했을때(open적용) */
+.open_gnb.open { top:0; left:310px; z-index:100  }
+.open_gnb.open span { background: transparent; }
+.open_gnb.open span:before { top:0; transform:rotate(45deg); }
+.open_gnb.open span:after { top:0;transform:rotate(-45deg); }
+
+/* search버튼 */
+.m_view_sch { display:block; width:60px; height:60px; position:absolute; top:0; right:40px; }
+
+.m_view_sch span { display:block; position:absolute; width:19px; height:18px; top:20px; left: 20px; text-indent:-9999px;}
+
+.m_view_sch span:before { display:block; content:""; width:10px; height:10px;
+     border: 2px solid #05141f; border-radius:50%; position:absolute; }
+.m_view_sch span:after { content:""; width:3px; height:7px; background:#05141f; 
+    position:absolute; top:11px; left:13px; transform:rotate(-45deg) }
+
+
+
+/*gnb-area 슬라이드메뉴 */
+.gnb_area { display:none; position:absolute; top:0; left:0; width:375px; 
+    height:auto; background:#fff; z-index:10; }
+
+.gnb_area .m_home { position:absolute; display:block; top:10px; left:15px; width:90px; }
+.gnb_area .m_home a { display:block; padding:10px; }
+.gnb_area .m_home a:before{ display:block; content:''; width:70px; height:16px; 
+    background:url('../images/logo.png') no-repeat; background-size:100%; }
+
+
+.util_wrap { position:absolute; bottom:-120px; display:block; background:#f7f8f8;
+     width:100%; height:auto; text-align:left; }
+.util_wrap a:hover { color:#05141f; text-decoration:underline; }
+.util_wrap ul li + li:before { display:none; }
+
+.util_wrap ul li { height:40px; width:50%; border-top:1px solid #d1d1d1}
+.util_wrap ul li a { display:block; font-size:12px; color:#05141f; padding:0 0 0 20px; line-height:40px; }
+
+.util_wrap ul li a:before { display:inline-block; content:""; width:5px; height:5px; 
+    border:1px solid #05141f;transform:rotate(45deg); border-left:none; border-bottom:none; margin-right:10px }
+
+.gnb_area .info { display:none; }
+.gnb_area .member { float:none; }
+.d_hidden { display:block; }
+.m_hidden { display:none; } 
+
+.gnb_area .member:before { display:block; content:""; width:1px; height:100%;
+    background:#d1d1d1; position:absolute; top:0; left:50%; }
+
+.util_wrap ul li:first-child a { padding-left:20px; }
+
+/*모바일-서치*/
+.util_wrap .member .view_sch { position: relative; margin-left:10px; }
+.util_wrap .member .view_sch span { display:inline-block; position:absolute; 
+    top:8px; left:0; width:13px; height:13px; text-indent:-9999px; }
+
+.util_wrap .member .view_sch span:before { display:block; content:''; 
+    width:6px; height:6px; border: 2px solid rgba(255,255,255,0.6); border-radius:50%; position:absolute; }
+.util_wrap .member .view_sch span:after { display:block; content:''; 
+    width:2px; height:5px; background:rgba(255,255,255,0.6); position:absolute; top:7px; left:9px;transform: rotate(-45deg); }
+
+.util_wrap .member .view_sch:hover span:before { border: 2px solid #fff; }
+.util_wrap .member .view_sch:hover span:after { background:#fff; }
+
+
+.gnb_nav { float:none; margin:60px 0 0 0; }
+.gnb_side { float:none; margin:0; }
+.gnb_area .dth1_1 { float:none; border-top:1px solid #d1d1d1;  }
+.gnb_area .dth1_a { position:relative; display:block; font-size:17px; text-align:left; font-weight:bold; 
+    padding:17px 0 0 25px; height:47px;  }
+
+.gnb_area .dth1_a .opt { display:block; width:24px; height:24px; position:absolute; top:12px; right:25px; 
+    background:#cdd0d2; border-radius:50%; }
+.gnb_area .dth1_a .opt:before, .gnb_area .dth1_a .opt:after { display:block; content:""; width:12px; 
+    height:2px; background:#fff; position:absolute; left:calc(50% - 6px); top:calc(50% - 1px);}
+.gnb_area .dth1_a .opt:before {}
+.gnb_area .dth1_a .opt:after { transform:rotate(90deg);}
+
+.m_gnb_dimmed { display:none; position:fixed; background:#05141f; top:0; left:0; width:100%; 
+    height:100%; z-index:8; opacity:0.8; filter:alpha(opacity=80); /*익스플로어 구버전 배려(5~7버전)*/  }
+
+
+
+
+/** #container **/
+#container { padding-top: 60px; }
+
+.snb_wrap { position:relative; top:auto;  }
+.snb_wrap a { }
+
+.snb_wrap h2 { float:left; position:relative; left:0; width:50%; text-align:left; 
+    font-size:16px; padding-left:25px; border-right:1px solid rgba(255,255,255,0.5);  }
+
+.snb_area { position:relative; overflow:hidden; }
+
+.snb_wrap .open_snb { display:block; line-height:49px; padding-left:20px; font-size:13px; transition:0.2s;}
+
+
+.open_snb:before, .open_snb:after { display:block; content:""; width:10px; 
+    height:2px; background:#fff; position:absolute; top:25px; right:25px; transition:0.3s; }
+.open_snb:before { transform:rotate(45deg)}
+.open_snb:after {transform:rotate(-45deg); right:19px; }
+
+.snb_wrap .open_snb.open { background:#cdd0d2; color:#05141f; }
+.open_snb.open:before { transform:rotate(-45deg); background:#05141f; }
+.open_snb.open:after {transform:rotate(45deg); background:#05141f; }
+
+.snb_wrap .open_snb.open + .snb_nav { display:block; position:relative; z-index:1 }
+.snb_wrap .open_snb.open ~ .etc { display:block; position:relative; z-index:1}
+
+.snb_nav { display:none; padding:0; background:#fff;  }
+.snb_nav .dth1_1 { float:none; margin-left:0px; border-bottom:1px solid #d1d1d1} 
+.snb_nav .dth1_a { font-size:13px; color:#05141f; padding-left:20px; line-height:40px; }
+.snb_nav .dth1_1.selected .dth1_a { color:#05141f; }
+
+.snb_nav .dth1_1.selected .dth1_a:after { display:none; }
+
+.etc { display:none; position:relative; top:auto; right:auto; background:#fff; }
+.etc a { line-height:40px; font-size:13px; color:#05141f; padding-left:20px;}
+
+.sales_kit { display:none; }
+
+.snb_wrap.stick { position:fixed; top:0; }
+.m_indicator.stick {  position:fixed; top:49px; z-index:999}
+
+
+
+
+/***   인디게이터 ***/
+.indicator { display:none; }
+.m_indicator { display:block; height:36px; width:100%; background:#fff; } 
+.m_indicator ul {}
+.m_indicator li { float:left; padding:0 10px; height:36px; }
+.m_indicator a { line-height:36px; font-size:12px; text-decoration:none; }
+.m_indicator li.on { border-bottom:2px solid #05141f}
+.m_indicator li.on a { font-weight:bold;}
+
+
+/**  content  ***/
+#content { margin:0 auto 0; }
+
+/**  content - keyVisualWrap **/
+.keyVisualWrap .bgArea { height:605px;}
+.keyVisualWrap .bgInner { margin-left:-618px; }
+.keyVisualWrap .bgInner img { margin-top:0; height:710px; }
+.keyVisualWrap .txtArea { left:20px; width:90%; margin-left:0; }
+.keyVisualWrap .txtArea h3 { font-size:28px; letter-spacing:0;}
+.keyVisualWrap .v_comment { top:575px; left:80px; }
+
+
+.carInfo ul { width:100%; }
+.carInfo p { font-size:12px; }
+.carInfo p .infoTxt { font-size:20px; }
+
+
+
+/* layout  - 디자인 */
+.layout .mainInner { height:auto; }
+
+.layout .textArea, .layout .textArea2 { width:100%; top:0; left:0; 
+    margin-left:0; padding-left:25px; }
+.layout .textArea h3 { font-size:18px; padding:60px 0 0; }
+.layout .textArea2 h4 { font-size:29px; padding:100px 0 15px ;}
+.layout .textArea2 p { font-size:14px; font-weight:bold;}
+.layout .textArea2 p br { display:none; }
+
+.layout .bgArea { height:auto; }
+.layout .bgArea .bgInner img { width:100%; margin-top:0; margin-left:0;}
+
+/* layout  - 리스트*/
+.layout .imgList .imgListTit { font-size:16px; left: 20px; top: 20px; }
+
+/* layout  - 리스트type2_in*/
+.layout .imgList.type2_in { width:auto; margin:20px 10px; }
+
+/* section -buy */
+.buy { padding-top:60px; }
+.buy_car { width:500px; height:175px;}
+.buy_link ul { width:100%; }
+.buy_link li a { padding:20% 3%; margin:5%; background:#fff; 
+    font-size:16px; font-weight:bold; color:#05141f;}
+}
+
+
+
+
+/* 화면 너비가 769px보다 작을때*/
+@media (max-width:768px){
+    .shadowBlack { text-shadow:none; }
+    .open_gnb { left:10px; } 
+    .m_view_sch { right:10px; }
+
+    /**content - keyVisualWrap ***/
+    .keyVisualWrap .bgArea { height:446px; }
+    .keyVisualWrap .bgInner { margin-left:-389px; }
+    .keyVisualWrap .bgInner img { height:446px;}
+    .keyVisualWrap .txtArea { top:50px; left:0; width:100%; }
+    .keyVisualWrap .txtArea h3 { font-size:19px; letter-spacing:-2px; 
+        text-align:center; line-height: 26px;} 
+    .keyVisualWrap .v_comment { display:none; }  
+    
+
+    .carInfo { height:auto; width:100%; text-align:left; }
+    .carInfo ul { border-right:none;}
+    .carInfo li { float:none; width:100%; border-left:none; border-bottom:1px solid #d1d1d1; }
+    .carInfo li>div { height:70px; }
+    
+    .carInfo img { float:left; padding:15px 0 0 40px;}
+    .carInfo li:nth-child(2) img { padding-left:30px;}
+    .carInfo p {  margin-left:110px; padding-top:15px; }
+
+
+
+    /* layout  - 디자인 */
+    .layout .textArea, .layout .textArea2 {padding-left:20px; }
+
+    .layout .textArea2 { position: relative; color:#05141f; }
+    .layout .textArea h3 { font-size:15px; padding:20px 0 0; }
+    .layout .textArea2 h4 { font-size:18px; padding:15px 0 10px ;}
+    .layout .textArea2 p { font-size:13px; font-weight:normal; color:#05141fb5; padding-bottom:10px; }
+
+    .layout .bgArea { height:auto; }
+    .layout .bgArea .bgInner img { width:100%; margin-top:0; margin-left:0;}
+
+
+
+    /* layout  - 리스트 */
+    .layout .subInner { width:290px; margin:0 auto 40px; }
+    .layout .imgList .imgListTit { font-size:15px; }
+    .layout .imgList em { width:40px; height:40px; }
+    .layout .imgList em:before, .layout .imgList em:after { width:20px; left:calc(50% - 10px); }
+    .layout .imgList li { border-top:none; border-left:none; }
+
+    .layout .imgList.type2 li { width:100%; }
+    .layout .imgList.type3 li { width:100%; }
+    .layout .imgList.type4 li { width:100%; }
+
+
+
+    /* 슬라이더가 추가 되었을때 (화살표,슬라이더넘버)*/
+    .slick-arrow { position:absolute; top:calc(50% - 14px); width:15px; height:28px; z-index:5; 
+        background-size:15px 28px; text-indent:-9999px; border:0; background-color:transparent; }
+    .slick-prev { left:10px; background-image:url('../images/btn_arrow_left.png');}
+    .slick-next { right:10px; background-image:url('../images/btn_arrow_right.png'); }  
+    .slick-dots { position:absolute; bottom:0; right:0; }  
+    .slick-dots li { color:#fff; background:rgba(0,0,0,0.4); padding:5px 10px; font-size:14px;}
+
+
+
+
+    /* layout  - 리스트 type2_in */
+    .layout .imgList.type2_in { width:auto; padding:40px 20px; background:#ebebeb; margin:20px 0 0; }
+    .layout .imgList.type2_in li { float:none; width:100%;  }
+    .layout .imgList.type2_in li:nth-child(2) { float:none; margin-top:10px;}
+    .layout .imgList.type2_in a { height:109px; }
+    .layout .imgList.type2_in .imgBox { display:table; height:100%}
+    .layout .imgList.type2_in .imgTitle { display:table-cell; vertical-align:middle; padding:0 0 15px}
+    .layout .imgList.type2_in .imgTitle:nth-of-type(2) { display:none; }
+    .layout .imgList.type2_in .imgDesc { display:none; }
+    .layout .imgList.type2_in em { top:30%; left:55px; transform:translate(0) scale(85%); }
+    .layout .imgList.type2_in img { float:left; width:145px; margin-right:20px; }
+
+
+
+    
+    /* section -buy */
+    .buy { padding-top:40px; }
+    .buy h3 { font-size:18px; }
+    .buy_car { width:320px; height:112px; margin-top:30px; }
+    .buy_btn { margin-top:13px; }
+
+    .buy_spec { display:none; }
+
+    .buy_link ul { width:100%; }
+    .buy_link li a { padding:20% 3%; margin:5%; background:#fff; font-size:16px; font-weight:bold; color:#05141f;}
+
+    .buy_link { padding:55px 10px 12px; margin-top:-40px; }
+    .buy_link li { display:block; width:auto;  }
+    .buy_link li a { padding:10px; margin:0; background:transparent; text-align: left; font-size:14px; border-top: 1px solid #a4a7aa}
+    .buy_link li:first-child a { border-top:none; } 
+
+    .buy_link li a:before { display:none;}
+
+
+}
+
+    
